@@ -27,3 +27,9 @@ useraccounts:unstyled
 useraccounts:bootstrap
 accounts-base
 accounts-password
+twbs:bootstrap
+raix:handlebar-helpers
+dburles:collection-helpers
+forwarder:autoform-wizard
+cfs:collection
+cfs:gridfs
