@@ -32,3 +32,6 @@ forwarder:autoform-wizard
 cfs:collection
 cfs:gridfs
 kadira:blaze-layout
+yogiben:autoform-file
+aldeed:autoform
+cfs:standard-packages
