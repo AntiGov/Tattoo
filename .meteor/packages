@@ -36,3 +36,5 @@ yogiben:autoform-file
 aldeed:autoform
 cfs:standard-packages
 yogiben:admin
+iron:router
+matb33:collection-hooks
