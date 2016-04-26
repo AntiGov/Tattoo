@@ -22,8 +22,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 kadira:flow-router
 aldeed:simple-schema
 aldeed:collection2
-yogiben:admin
-useraccounts:unstyled
 useraccounts:bootstrap
 accounts-base
 accounts-password
@@ -33,3 +31,4 @@ dburles:collection-helpers
 forwarder:autoform-wizard
 cfs:collection
 cfs:gridfs
+kadira:blaze-layout
