@@ -16,14 +16,7 @@ module.exports = {
     },
     env: {
       ROOT_URL: 'http://welcome.dentonradio.com',
-      MONGO_URL: 'mongodb://localhost/meteor'
+      MONGO_URL: 'mongodb://mongodb.dentonradio.com/welcome'
     },
-  },
-    mongo: {
-    oplog: true,
-    port: 27017,
-    servers: {
-      one: {},
-    },
-  },
+  }
 };
