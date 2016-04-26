@@ -1,9 +1,9 @@
 <template name="formView">
 {{#with currentUser}}
-<div style="background-image:url('{{getBackgroundImage}}')">
+<div style="background-image:url('{{getBackgroundImage}}');width:100%;height:100%">
+<div class="container" style="opacity:.9;background-color:#CCCCCC;">
 <h1>Welcome To Denton</h1>
-<hr>
-<div class="jumbotron bg-grey">
+	<hr>
 	{{> quickForm collection="UserForms" id="insertBookForm" type="insert"}}
 </div>
 </div>
