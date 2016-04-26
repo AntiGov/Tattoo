@@ -1,0 +1,5 @@
+job1:
+  script: 
+  - ./deploy.sh
+  only: 
+  - master
