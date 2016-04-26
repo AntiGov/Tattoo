@@ -1,0 +1,11 @@
+<template name="formView">
+{{#with currentUser}}
+<div style="background-image:url('{{getBackgroundImage}}')">
+<h1>Welcome To Denton</h1>
+<hr>
+<div class="jumbotron bg-grey">
+	{{> quickForm collection="UserForms" id="insertBookForm" type="insert"}}
+</div>
+</div>
+{{/with}}
+</template>
