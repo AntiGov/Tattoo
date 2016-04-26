@@ -6,10 +6,17 @@ App.info({
   version: "1.0.0"
 });
 
+App.accessRule('http://gitlab.dentonradio.com/welcoming-center/welcoming-crm.git', {
+  'minimum-tls-version': 'TLSv1.0',
+  'requires-forward-secrecy': false,
+});
+
+//
 App.accessRule('*.google.com/*');
 App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
 App.accessRule('*.typekit.net/*');
+//
 
 App.setPreference('BackgroundColor', '0xff0000ff');
 App.setPreference('Orientation', 'default');
