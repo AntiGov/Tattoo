@@ -3,6 +3,9 @@
 {{#with getSettings}}
 
 <iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}"></iframe>
+{{#if showSimpleView}}
+<div style="position:absolute;z-index:9999;"><a href="" data-action="hide-simple-view"><button class="btn btn-primary">Done</button></a></div>
+{{/if}}
 <iframe src="http://www.simpleviewinc.com/" class="load-iframe {{showSimpleView}}" style="background-color:#FFF;"></iframe>
 {{#if isLocating}}
 <div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
