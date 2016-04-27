@@ -1,13 +1,16 @@
 <template name="mainLayout">
-<div class="bgImage" style="background-image:url('{{currentUser.getBackgroundImage}}');">
-{{> Template.dynamic template=main}}
-</div>
 {{#with currentUser}}
 {{#with getSettings}}
+
+<iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}"></iframe>
+<iframe src="http://www.simpleviewinc.com/" class="load-iframe {{showSimpleView}}" style="background-color:#FFF;"></iframe>
 {{#if isLocating}}
 <div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
 </div>
 {{/if}}
 {{/with}}
 {{/with}}
+<div class="bgImage" style="background-image:url('{{currentUser.getBackgroundImage}}');">
+{{> Template.dynamic template=main}}
+</div>
 </template>

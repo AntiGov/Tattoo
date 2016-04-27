@@ -1,13 +1,13 @@
 accounts-base@1.2.7
 accounts-password@1.1.8
 alanning:roles@1.2.15
-aldeed:autoform@5.5.1
+aldeed:autoform@5.8.1
 aldeed:collection2@2.9.1
 aldeed:collection2-core@1.1.1
 aldeed:schema-deny@1.0.1
 aldeed:schema-index@1.0.1
 aldeed:simple-schema@1.5.3
-aldeed:tabular@1.4.2
+aldeed:tabular@1.6.1
 aldeed:template-extension@4.0.0
 allow-deny@1.0.4
 autopublish@1.0.7
@@ -58,7 +58,7 @@ email@1.0.12
 es5-shim@4.5.10
 fastclick@1.0.11
 fortawesome:fontawesome@4.5.0
-forwarder:autoform-wizard@0.8.0
+forwarder:autoform-wizard@0.9.1
 geojson-utils@1.0.8
 hot-code-push@1.0.4
 html-tools@1.0.9
@@ -83,10 +83,10 @@ livedata@1.0.18
 localstorage@1.0.9
 logging@1.0.12
 matb33:collection-hooks@0.8.1
-mdg:validation-error@0.2.0
+mdg:validation-error@0.5.1
 meteor@1.1.14
 meteor-base@1.0.4
-meteorhacks:meteorx@1.0.2
+meteorhacks:meteorx@1.4.1
 meteorhacks:unblock@1.1.0
 mfactory:admin-lte@0.0.2
 minifier-css@1.1.11
@@ -98,7 +98,7 @@ mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.6.1
 modules-runtime@0.6.3
-momentjs:moment@2.10.6
+momentjs:moment@2.13.1
 mongo@1.1.7
 mongo-id@1.0.4
 mongo-livedata@1.0.12

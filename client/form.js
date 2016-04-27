@@ -35,8 +35,10 @@ Template.formView.helpers({
         UserForms.insert(_.extend(wizard.mergedData(), data), function(err, id) {
           if (err) {
             self.done();
+            console.log("whoot?")
           } else {
-            FlowRouter.go('discoverDenton');
+            var us = UserSettings.findOne({userId: Meteor.userId()});
+            UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}})
           }
         });
       }
