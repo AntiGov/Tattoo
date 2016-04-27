@@ -1,5 +1,7 @@
 <template name="mainLayout">
+<div class="bgImage" style="background-image:url('{{currentUser.getBackgroundImage}}');">
 {{> Template.dynamic template=main}}
+</div>
 {{#with currentUser}}
 {{#with getSettings}}
 {{#if isLocating}}
