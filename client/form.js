@@ -10,7 +10,7 @@ Template.formView.helpers({
       title: 'subscribe',
       schema: UserFormPage2,
       formId: "insrt subscrib"
-       {
+    },  {
       id: 'zip-information',
       title: 'What is your zip code',
       schema: UserFormPage3,
@@ -31,5 +31,5 @@ Template.formView.helpers({
       schema: UserFormPage5,
       formId: "comments"
     }, 
-  }]
+  ]
 }});
