@@ -29,7 +29,17 @@ Template.formView.helpers({
       id: 'comment-information',
       title: 'Comments',
       schema: UserFormPage5,
-      formId: "comments"
+      formId: "comments",
+      onSubmit: function(data, wizard) {
+        var self = this;
+        UserForms.insert(_.extend(wizard.mergedData(), data), function(err, id) {
+          if (err) {
+            self.done();
+          } else {
+            FlowRouter.go('discoverDenton');
+          }
+        });
+      }
     }, 
   ]
 }});
