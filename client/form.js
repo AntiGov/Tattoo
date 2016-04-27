@@ -29,7 +29,19 @@ Template.formView.helpers({
       id: 'comment-information',
       title: 'Comments',
       schema: UserFormPage5,
-      formId: "comments"
+      formId: "comments",
+      onSubmit: function(data, wizard) {
+        var self = this;
+        UserForms.insert(_.extend(wizard.mergedData(), data), function(err, id) {
+          if (err) {
+            self.done();
+            console.log("whoot?")
+          } else {
+            var us = UserSettings.findOne({userId: Meteor.userId()});
+            UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}})
+          }
+        });
+      }
     }, 
   ]
 }});

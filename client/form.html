@@ -1,6 +1,5 @@
 <template name="formView">
 {{#with currentUser}}
-<div class="bgImage" style="background-image:url('{{getBackgroundImage}}');">
 <div class="formCarrier" >
 <!--<h1 style ="text-align: center;">Welcome To Denton</h1>-->
 	<!--<hr>-->
@@ -8,7 +7,5 @@
 	{{> wizard id="basic" steps=steps buttonClasses="btn btn-primary"}}
 
 </div>
-</div>
 {{/with}}
-<iframe></iframe>
 </template>
