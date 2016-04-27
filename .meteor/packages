@@ -38,8 +38,6 @@ cfs:standard-packages
 yogiben:admin
 iron:router
 matb33:collection-hooks
-<<<<<<< HEAD
 planifica:wizard
-=======
 session
->>>>>>> aa013d65726fe275d38f4ba7d72b0d0d0cc300c7
+
