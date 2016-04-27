@@ -4,8 +4,9 @@ Tracker.autorun(function(){
 			FlowRouter.go("welcomeToDenton");
 		}
 		if(FlowRouter.current().route.name === "form") {
-			if(Meteor.user().getSettings().showCRM){
-				FlowRouter.go("form");
+			if(!Meteor.user().getSettings().showCRM){
+				var us = UserSettings.findOne({userId: Meteor.userId()});
+				UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
 			}
 			else {
 				//show discover dnton
@@ -23,6 +24,7 @@ function checkLastActivity(){
 	if(Meteor.user()){
 		var us = UserSettings.findOne({userId: Meteor.userId()});
 		UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
+		FlowRouter.go("welcomeToDenton");
 		if(Meteor.user() && Meteor.user().status === "idle"){
 			console.log(Meteor.user().status.lastActivity);
 			FlowRouter.go("welcomeToDenton");
