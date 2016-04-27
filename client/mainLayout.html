@@ -1,3 +1,11 @@
 <template name="mainLayout">
 {{> Template.dynamic template=main}}
+{{#with currentUser}}
+{{#with getSettings}}
+{{#if isLocating}}
+<div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
+</div>
+{{/if}}
+{{/with}}
+{{/with}}
 </template>
