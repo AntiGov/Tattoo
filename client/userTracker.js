@@ -17,7 +17,7 @@ Tracker.autorun(function(){
 })
 
 Meteor.startup(function(){
-	Meteor.setInterval(checkLastActivity, 15000);
+	Meteor.setInterval(checkLastActivity, 150000);
 })
 
 function checkLastActivity(){
