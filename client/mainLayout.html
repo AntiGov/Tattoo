@@ -1,3 +1,7 @@
+<body>
+
+</body>
+
 <template name="mainLayout">
 {{#with currentUser}}
 {{#with getSettings}}
@@ -13,7 +17,7 @@
 {{/if}}
 {{/with}}
 {{/with}}
-<div class="bgImage" style="background-image:url('{{currentUser.getBackgroundImage}}');">
+<div  style="position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
 {{> Template.dynamic template=main}}
 </div>
 </template>
