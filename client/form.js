@@ -1,4 +1,12 @@
-Template.formView.helpers({
+Autoform.insertForm.hooks({
+  onSuccess() {
+    //createform and post//create form and post??
+  }
+})
+
+
+
+/*Template.formView.helpers({
   steps: function() {
     return [{
       id: 'contact-information',
@@ -44,4 +52,4 @@ Template.formView.helpers({
       }
     }, 
   ]
-}});
+}});*/

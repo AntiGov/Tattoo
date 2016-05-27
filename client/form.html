@@ -1,11 +1,9 @@
 <template name="formView">
 {{#with currentUser}}
 <div class="formCarrier" >
-<!--<h1 style ="text-align: center;">Welcome To Denton</h1>-->
-	<!--<hr>-->
-
-	{{> wizard id="basic" steps=steps buttonClasses="btn btn-primary" stepsTemplate="steps_semanticUI"}}
-
+{{#autoform type="insert" collection="UserForms" id="insertForm"}}
+	<button class="btn btn-primary">Submit</button>
+{{/autoform}}
 </div>
 {{/with}}
 </template>
