@@ -5,6 +5,5 @@ Template.formSubmitView.helpers({
 })
 
 Template.formSubmitView.onRendered(function(){
-	AppSettings.update({_id: Meteor.user() && Meteor.user().getSettings()._id}, {$set: {showDiscoverDenton: true}})
 	$("#svfs").submit();
 })
