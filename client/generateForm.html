@@ -1,13 +1,13 @@
 <template name="generateForm">
 <form action="http://denton.simpleviewcrm.com/forms/index.cfm?action=save" method="post" target="simpleview-iframe" id="svfs">
 	<input id="date" name="inquiry_inquirydate" value="05/24/2016">
-	<input id="groupid" name="groupid" type="hidden" value="5">
-	<input id="formid" name="formid" type="hidden" value="7">
-	<input id="cc" name="contact_comments" type="hidden" value="jake">
-   <input type="hidden" name="udf_409" value="111" />
-   <input type="hidden" name="contact_fname" value="jake" />
-   <input type="hidden" name="contact_lname" value="jake" />
-   <input type="hidden" name="contact_email" value="jake" />
-   <input type="hidden" name="contact_zip" value="76205" />
+	<input id="groupid" name="groupid" value="5">
+	<input id="formid" name="formid" value="{{formId}}">
+	<input id="cc" name="contact_comments" value="{{comments}}">
+   <input name="udf_409" value="{{numInGroup}}" />
+   <input name="contact_fname" value="{{firstName}}" />
+   <input name="contact_lname" value="{{lastName}}" />
+   <input name="contact_email" value="{{email}}" />
+   <input name="contact_zip" value="{{zip}}" />
 </form>
 </template>
