@@ -1,6 +1,6 @@
 Autoform.insertForm.hooks({
-  onSuccess() {
-    //createform and post//create form and post??
+  onSuccess(userId, doc) {
+    Router.go("formSubmit", doc._id);
   }
 })
 
