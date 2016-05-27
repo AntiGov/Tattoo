@@ -1,6 +1,8 @@
-Autoform.insertForm.hooks({
-  onSuccess(userId, doc) {
-    Router.go("formSubmit", doc._id);
+AutoForm.hooks({
+  insertForm: {
+    onSuccess(userId, doc) {
+      Router.go("formSubmit", doc._id);
+    }
   }
 })
 

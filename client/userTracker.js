@@ -5,8 +5,8 @@ Tracker.autorun(function(){
 		}
 		if(FlowRouter.current().route.name === "form") {
 			if(!Meteor.user().getSettings().showCRM){
-				var us = UserSettings.findOne({userId: Meteor.userId()});
-				UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
+				var us = AppSettings.findOne({userId: Meteor.userId()});
+				AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
 			}
 			else {
 				//show discover dnton
@@ -22,8 +22,8 @@ Meteor.startup(function(){
 
 function checkLastActivity(){
 	if(Meteor.user()){
-		var us = UserSettings.findOne({userId: Meteor.userId()});
-		UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
+		var us = AppSettings.findOne({userId: Meteor.userId()});
+		AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
 		FlowRouter.go("welcomeToDenton");
 		if(Meteor.user() && Meteor.user().status === "idle"){
 			console.log(Meteor.user().status.lastActivity);
