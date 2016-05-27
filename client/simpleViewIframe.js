@@ -6,8 +6,7 @@ Template.simpleViewIframe.events({
 		$("#svlf").submit();
 	},
 	"click [data-action='goto-form']"(){
-		console.log("go to form")
 		var location = Meteor.user().getSettings().appLocation();
-		document.getElementById("simpleview-iframe").src = location.linkUrl;
+		document.getElementById("simpleview-iframe").src = "http://denton.simpleviewcrm.com/forms/index.cfm?action=form&formID=" + location.formId;
 	}
 })

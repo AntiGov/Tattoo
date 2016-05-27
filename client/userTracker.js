@@ -4,7 +4,7 @@ Tracker.autorun(function(){
 			FlowRouter.go("welcomeToDenton");
 		}
 		if(FlowRouter.current().route.name === "form") {
-			if(!Meteor.user().getSettings().showCRM){
+			if(Meteor.user().getSettings() && !Meteor.user().getSettings().showCRM){
 				var us = AppSettings.findOne({userId: Meteor.userId()});
 				AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
 			}
