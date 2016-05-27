@@ -21,13 +21,16 @@ Meteor.startup(function(){
 })
 
 function checkLastActivity(){
-	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton" || !Meteor.user().getSettings().showCRM){
+	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton"){
 		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
 		diff /= 60;
 		if(diff >= Meteor.user().getSettings().timeoutTime){
 			var us = AppSettings.findOne({userId: Meteor.userId()});
-			AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
-			FlowRouter.go("welcomeToDenton");
+			 if(Meteor.user().getSettings().showCRM){
+			 		AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
+					FlowRouter.go("welcomeToDenton");
+			 }
+			 document.getElementById("discoverDentonIframe").src = "http://discoverDenton.com";
 		}
 	}
 }

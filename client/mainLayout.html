@@ -6,15 +6,15 @@
 {{#with currentUser}}
 {{#with getSettings}}
 
-<iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}"></iframe>
+<iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}" id="discoverDentonIframe"></iframe>
 {{> simpleViewIframe}}
 {{#if isLocating}}
 <div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
 </div>
 {{/if}}
-{{/with}}
-{{/with}}
-<div  style="position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
+<div style="position:absolute;top:0;left:0;width:{{#if showDiscoverDenton}}0%{{else}}100%{{/if}};height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
 {{> Template.dynamic template=main}}
 </div>
+{{/with}}
+{{/with}}
 </template>
