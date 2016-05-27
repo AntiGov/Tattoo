@@ -1,7 +1,7 @@
 AutoForm.hooks({
   insertForm: {
     onSuccess(userId, doc) {
-      Router.go("formSubmit", doc._id);
+      FlowRouter.go("formSubmit", {_id: doc._id});
     }
   }
 })
