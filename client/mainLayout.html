@@ -7,26 +7,7 @@
 {{#with getSettings}}
 
 <iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}"></iframe>
-{{#if showSimpleView}}}}
-<div style="position:absolute;top:30px;z-index:99999;"><a href="" data-action="login-simple-view"><button class="btn btn-primary">Login</button></a></div>
-<form action="http://denton.simpleviewcrm.com/login/login.cfm" method="post" target="simpleview-iframe" id="svlf">
-   <input type="hidden" name="email" value="jake@discoverdenton.com" />
-   <input type="hidden" name="password" value="welcomecent" />
-</form>
-<form action="http://denton.simpleviewcrm.com/forms/index.cfm?action=save" method="post" target="simpleview-iframe" id="svfs">
-	<input id="date" name="inquiry_inquirydate" value="05/24/2016">
-	<input id="groupid" name="groupid" type="hidden" value="5">
-	<input id="formid" name="formid" type="hidden" value="7">
-	<input id="cc" name="contact_comments" type="hidden" value="jake">
-   <input type="hidden" name="udf_409" value="111" />
-   <input type="hidden" name="contact_fname" value="jake" />
-   <input type="hidden" name="contact_lname" value="jake" />
-   <input type="hidden" name="contact_email" value="jake" />
-   <input type="hidden" name="contact_zip" value="76205" />
-</form>
-<div style="position:absolute;z-index:99999;"><a href="" data-action="hide-simple-view"><button class="btn btn-primary">Done</button></a></div>
-{{/if}}
-<iframe id="simpleview-iframe" name="simpleview-iframe" src="http://denton.simpleviewcrm.com/" class="load-iframe {{showSimpleView}}" style="background-color:#FFF;"></iframe>
+{{> simpleViewIframe}}
 {{#if isLocating}}
 <div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
 </div>
