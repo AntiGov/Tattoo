@@ -17,16 +17,16 @@ Tracker.autorun(function(){
 })
 
 Meteor.startup(function(){
-	Meteor.setInterval(checkLastActivity, 150000);
+	Meteor.setInterval(checkLastActivity, 500);
 })
 
 function checkLastActivity(){
-	if(Meteor.user()){
-		var us = AppSettings.findOne({userId: Meteor.userId()});
-		AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
-		FlowRouter.go("welcomeToDenton");
-		if(Meteor.user() && Meteor.user().status === "idle"){
-			console.log(Meteor.user().status.lastActivity);
+	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton"){
+		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
+		diff /= 60;
+		if(diff >= Meteor.user().getSettings().timeoutTime){
+			var us = AppSettings.findOne({userId: Meteor.userId()});
+			AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
 			FlowRouter.go("welcomeToDenton");
 		}
 	}
