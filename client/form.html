@@ -1,6 +1,6 @@
 <template name="formView">
 {{#with currentUser}}
-<div class="formCarrier" >
+<div class="formCarrier" style="background-color:{{getSettings.appLocation.bgColor}};color:{{getSettings.appLocation.fontColor}};">
 {{#autoForm type="insert" collection="UserForms" id="insertForm"}}
 	<button class="btn btn-primary">Submit</button>
 {{/autoForm}}
