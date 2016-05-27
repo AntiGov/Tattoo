@@ -21,7 +21,7 @@ Meteor.startup(function(){
 })
 
 function checkLastActivity(){
-	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton"){
+	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton" || !Meteor.user().getSettings().showCRM){
 		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
 		diff /= 60;
 		if(diff >= Meteor.user().getSettings().timeoutTime){
