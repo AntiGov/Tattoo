@@ -5,8 +5,13 @@
 	{{> afQuickField name="numInGroup"}}
 	{{> afQuickField name="zip"}}
 	<!-- Email subscribe?-->
-	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div class="panel panel-default"> <div class="panel-heading" role="tab" id="headingOne"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> More Options </a> </h4> </div> <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body"> 
+	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div class="panel panel-default"> <div class="panel-heading" role="tab" id="headingOne"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> More Options </a> </h4> </div> <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body">
 	{{> afQuickField name="firstName"}}
+	{{> afQuickField name="lastName"}}
+	{{> afQuickField name="email"}}
+	{{> afQuickField name="zip"}}
+	{{> afQuickField  name="brochures" type="select-checkbox" noselect="true"}}	
+	{{> afQuickField  name="interests" type="select-checkbox" noselect="true"}}
 	</div> </div> </div> </div> </div>
 	<!-- all the reset sof the shit-->
 	<button class="btn btn-primary" type="submit">Submit</button>
