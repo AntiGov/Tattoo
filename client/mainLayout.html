@@ -14,6 +14,7 @@
 </div>
 {{/if}}
 <div style="position:absolute;top:0;left:0;width:{{#if showDiscoverDenton}}0%{{else}}100%{{/if}};height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
+{{> formView}}
 {{> Template.dynamic template=main}}
 </div>
 {{/with}}
