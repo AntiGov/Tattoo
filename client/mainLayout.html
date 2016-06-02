@@ -3,6 +3,7 @@
 </body>
 
 <template name="mainLayout">
+{{#if currentUser}}
 {{#with currentUser}}
 {{#with getSettings}}
 
@@ -17,4 +18,7 @@
 </div>
 {{/with}}
 {{/with}}
+{{else}}
+{{> Template.dynamic template=main}}
+{{/if}}
 </template>
