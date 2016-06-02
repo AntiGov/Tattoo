@@ -4,9 +4,9 @@ Tracker.autorun(function(){
 			FlowRouter.go("welcomeToDenton");
 		}
 		if(FlowRouter.current().route.name === "form") {
-			if(!Meteor.user().getSettings().showCRM){
-				var us = UserSettings.findOne({userId: Meteor.userId()});
-				UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
+			if(Meteor.user().getSettings() && !Meteor.user().getSettings().showCRM){
+				var us = AppSettings.findOne({userId: Meteor.userId()});
+				AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
 			}
 			else {
 				//show discover dnton
@@ -17,17 +17,20 @@ Tracker.autorun(function(){
 })
 
 Meteor.startup(function(){
-	Meteor.setInterval(checkLastActivity, 150000);
+	Meteor.setInterval(checkLastActivity, 500);
 })
 
 function checkLastActivity(){
-	if(Meteor.user()){
-		var us = UserSettings.findOne({userId: Meteor.userId()});
-		UserSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
-		FlowRouter.go("welcomeToDenton");
-		if(Meteor.user() && Meteor.user().status === "idle"){
-			console.log(Meteor.user().status.lastActivity);
-			FlowRouter.go("welcomeToDenton");
+	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton"){
+		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
+		diff /= 60;
+		if(diff >= Meteor.user().getSettings().timeoutTime){
+			var us = AppSettings.findOne({userId: Meteor.userId()});
+			 if(Meteor.user().getSettings().showCRM){
+			 		AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
+					FlowRouter.go("welcomeToDenton");
+			 }
+			 document.getElementById("discoverDentonIframe").src = "http://discoverDenton.com";
 		}
 	}
 }

@@ -1,6 +1,15 @@
 <template name="welcomeToDentonView">
-<div data-action="goto-form">
+<h1>Hello</h1>
+{{#with currentUser}}
+<div class="formCarrier" style="background-color:{{getSettings.appLocation.bgColor}};color:{{getSettings.appLocation.fontColor}};">
+<div data-action="goto-form" >
 <h1>Welcome to denton</h1>
 <h2>Touch to begin!</h2>
 </div>
+<<<<<<< HEAD
 </template>
+=======
+</div>
+{{/with}}
+</template>
+>>>>>>> 71e1e03f9cf0f7d7f8d0c79e80bdb16070e58f20

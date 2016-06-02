@@ -1,19 +1,17 @@
-<template name="mainLayout">
-{{#with currentUser}}
-{{#with getSettings}}
+<body>
 
-<iframe src="http://discoverDenton.com" class="load-iframe {{showDiscoverDenton}}"></iframe>
-{{#if showSimpleView}}
-<div style="position:absolute;z-index:9999;"><a href="" data-action="hide-simple-view"><button class="btn btn-primary">Done</button></a></div>
-{{/if}}
-<iframe src="http://www.simpleviewinc.com/" class="load-iframe {{showSimpleView}}" style="background-color:#FFF;"></iframe>
+</body>
+
+<template name="mainLayout">
+{{#with currentUser.getSettings}}
+<iframe src="http://discoverDenton.com" class="load-iframe {{currentUser.getSettings.showDiscoverDenton}}" id="discoverDentonIframe"></iframe>
+{{> simpleViewIframe}}
 {{#if isLocating}}
 <div style="position:fixed;top:0;left:0;height:100%;width:100%;background-color:green;">
 </div>
 {{/if}}
 {{/with}}
-{{/with}}
-<div class="bgImage" style="background-image:url('{{currentUser.getBackgroundImage}}');">
+<div style="position:absolute;top:0;left:0;width:{{#if currentUser.getSettings.showDiscoverDenton}}0%{{else}}100%{{/if}};height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
 {{> Template.dynamic template=main}}
 </div>
 </template>

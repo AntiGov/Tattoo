@@ -1,0 +1,13 @@
+<template name="simpleViewIframe">
+{{currentUser.getSettings.showSimpleView}}
+{{#if currentUser.getSettings.showSimpleView}}
+<div style="position:absolute;top:0px;z-index:99999;"><a href="" data-action="login-simple-view"><button class="btn btn-primary">Login</button></a></div>
+<div style="position:absolute;top:30px;z-index:99999;"><a href="" data-action="goto-form"><button class="btn btn-primary">Goto Form</button></a></div>
+<div style="position:absolute;top:60px;z-index:99999;"><a href="" data-action="hide-simple-view"><button class="btn btn-primary">Done</button></a></div>
+<form action="http://denton.simpleviewcrm.com/login/login.cfm" method="post" target="simpleview-iframe" id="svlf">
+   <input type="hidden" name="email" value="jake@discoverdenton.com" />
+   <input type="hidden" name="password" value="welcomecent" />
+</form>
+{{/if}}
+<iframe id="simpleview-iframe" name="simpleview-iframe" src="http://denton.simpleviewcrm.com/" class="load-iframe {{currentUser.getSettings.showSimpleView}}" style="background-color:#FFF;"></iframe>
+</template>

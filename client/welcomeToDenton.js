@@ -3,3 +3,9 @@ Template.welcomeToDentonView.events({
 		FlowRouter.go("form");
 	}
 })
+
+/*Template.welcomeToDentonView.onRendered(function(){
+	if(!UserStatus.isMonitoring()){
+		UserStatus.startMonitor(100,100);
+	}
+})*/
