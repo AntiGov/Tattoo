@@ -1,10 +1,11 @@
 .formCarrier{
 	position: absolute;
 	top: 50%;
-	width:80%;
+	width:85%;
+	max-height:85%;
 	margin-left:10%;
 	margin-right:10%;
-	padding:20px;
+	padding:30px;
 	transform: translateY(-50%);
   font-size:34px;
   border-radius:30px;

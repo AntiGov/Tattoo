@@ -1,7 +1,7 @@
 <template name="welcomeToDentonView">
 {{#with currentUser}}
-<div class="formCarrier" style="background-color:{{getSettings.appLocation.bgColor}};color:{{getSettings.appLocation.fontColor}};">
-<div style="text-align:center;" data-action="goto-form" >
+<div class="formCarrier" style="background-color:{{getSettings.appLocation.bgColor}};color:{{getSettings.appLocation.fontColor}};display:table;">
+<div style="text-align:center;font-size:110px;padding:50px;display:table-cell;vertical-align:middle;" data-action="goto-form" >
 {{{getSettings.appLocation.welcomePhrase}}}
 </div>
 </div>

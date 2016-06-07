@@ -6,3 +6,29 @@ AutoForm.hooks({
     }
   }
 })
+
+Template.formView.events({
+	"click [data-action='show-subscribe']"(e) {
+		Template.instance().emailSubscribe.set(true);
+		e.stopPropagation();
+		e.preventDefault();
+	},
+	"click [data-action='hide-subscribe']"(e) {
+		Template.instance().emailSubscribe.set(false);
+		e.stopPropagation();
+		e.preventDefault();
+	},
+	"click [data-action='submitForm']"() {
+		document.getElementById("submitFormBtn").click();
+	}
+})
+
+Template.formView.onCreated(function(){
+	this.emailSubscribe = new ReactiveVar(false);
+})
+
+Template.formView.helpers({
+	emailSubscribe() {
+		return Template.instance().emailSubscribe.get();
+	}
+})
