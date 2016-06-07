@@ -6,4 +6,5 @@ Template.formSubmitView.helpers({
 
 Template.formSubmitView.onRendered(function(){
 	$("#svfs").submit();
+	FlowRouter.go("welcomeToDenton");
 })

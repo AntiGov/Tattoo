@@ -20,15 +20,23 @@ Template.formView.events({
 	},
 	"click [data-action='submitForm']"() {
 		document.getElementById("submitFormBtn").click();
+	},
+	"click [data-action='toggleExpand']"(){
+		var oe = Template.instance().optionsExpanded.get();
+		Template.instance().optionsExpanded.set(!oe);
 	}
 })
 
 Template.formView.onCreated(function(){
 	this.emailSubscribe = new ReactiveVar(false);
+	this.optionsExpanded = new ReactiveVar(false);
 })
 
 Template.formView.helpers({
 	emailSubscribe() {
 		return Template.instance().emailSubscribe.get();
+	},
+	optionsExpanded() {
+		return Template.instance().optionsExpanded.get();
 	}
 })
