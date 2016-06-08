@@ -4,8 +4,6 @@ Template.welcomeToDentonView.events({
 	}
 })
 
-/*Template.welcomeToDentonView.onRendered(function(){
-	if(!UserStatus.isMonitoring()){
-		UserStatus.startMonitor(100,100);
-	}
-})*/
+//Template.welcomeToDentonView.onRendered(function(){
+
+//})
