@@ -3,20 +3,30 @@
 <div class="formCarrier" style="background-color:{{getSettings.appStyle.bgColor}};color:{{getSettings.appStyle.fontColor}};">
 {{#autoForm type="insert" collection="UserForms" id="insertForm"}}
 	<div class="row">
-	<div class="col-md-6">{{> afQuickField name="numInGroup"}}</div>
-	<div class="col-md-6">{{> afQuickField name="zip"}}</div>
+		<div class="col-md-6">
+			<div class="row formSplit">
+				<div class="col-md-6">How many in your group?</div>
+				<div class="col-md-6">{{> afQuickField name="numInGroup" style="line-height:50px;" label=false class="input-lg"}}</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="row formSplit">
+				<div class="col-md-6">What's your zipcode?</div>
+				<div class="col-md-6">{{> afQuickField name="zip"  label=false}}</div>
+			</div>
+		</div>
 	</div>
 	{{#unless emailSubscribe}}
 	<a style="color:{{getSettings.appStyle.accentColor}};" href="" data-action="show-subscribe">Subscribe to our newsletter?</a>
 	{{else}}
 	<a style="color:{{getSettings.appStyle.accentColor}};" href="" data-action="hide-subscribe">Cancel subscription</a>
-	{{> afQuickField name="email"}}
+	{{> afQuickField name="email" label=false}}
 	{{/unless}}
 	<!-- Email subscribe?-->
 	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="color:{{getSettings.appStyle.accentColor}};">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body"> 
 	<div class="row">
-	<div class="col-md-6">{{> afQuickField name="firstName"}}</div>
-	<div class="col-md-6">{{> afQuickField name="lastName"}}</div>
+	<div class="col-md-6">First Name {{> afQuickField name="firstName" label=false}}</div>
+	<div class="col-md-6">Last Name {{> afQuickField name="lastName" label=false}}</div>
 	</div>
 	<div style="font-size:20px;">{{> afQuickField  name="brochures" type="select-checkbox-inline" noselect="true"}}	
 	{{> afQuickField  name="interests" type="select-checkbox-inline" noselect="true"}}</div>

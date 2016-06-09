@@ -1,5 +1,5 @@
 .formCarrier{
-	opacity:.95;
+	opacity:.96;
 	position: absolute;
 	top: 50%;
 	width:85%;
@@ -12,10 +12,25 @@
   border-radius:30px;
 }
 
+input {
+	line-height:30px;
+}
+
+.h1, .h2, .h3 {
+	font-family: 'Roboto Slab', serif;
+}
+
+.holder {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	background-size:cover;
+}
+
 .bgImage{
 	height: 100%;
 	width: 100%;
-	background-size:cover;
 }
 
 .load-iframe {
@@ -32,4 +47,11 @@
 	z-index:9999;
 }
 
-
+.welcomePhraseStyle{
+	font-size:110px;
+	font-family: 'Roboto Slab', serif;
+}
+.formSplit .col-md-6{
+	padding:25px;
+	text-align:center;
+}

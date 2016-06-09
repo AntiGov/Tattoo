@@ -11,7 +11,7 @@
 </div>
 {{/if}}
 {{/with}}
-<div style="position:absolute;top:0;left:0;width:{{#if currentUser.getSettings.showDiscoverDenton}}0%{{else}}100%{{/if}};height:100%;background-image:url('{{currentUser.getBackgroundImage}}')">
+<div style="width:{{#if currentUser.getSettings.showDiscoverDenton}}0%{{else}}100%{{/if}};background-image:url('{{currentUser.getBackgroundImage}}')" class="holder">
 {{> Template.dynamic template=main}}
 </div>
 </template>
