@@ -7,12 +7,14 @@ module.exports = {
       // pem: './mykey',
     },
   },
-
   meteor: {
     name: 'DRWelcomingCenter',
     path: '../',
     servers: {
       one: {},
+    },
+    buildOptions: {
+      serverOnly: true
     },
     env: {
       ROOT_URL: 'http://welcome.dentonradio.com',

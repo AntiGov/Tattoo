@@ -1,4 +1,5 @@
 .formCarrier{
+	opacity:.95;
 	position: absolute;
 	top: 50%;
 	width:85%;
@@ -14,6 +15,7 @@
 .bgImage{
 	height: 100%;
 	width: 100%;
+	background-size:cover;
 }
 
 .load-iframe {
