@@ -16,6 +16,8 @@ App.accessRule('*.google.com/*');
 App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
 App.accessRule('*.typekit.net/*');
+App.accessRule("*.discoverdenton.com/*");
+App.accessRule("*.simpleviewcrm.com/*");
 //
 
 App.setPreference('BackgroundColor', '0xff0000ff');
