@@ -1,5 +1,5 @@
 App.info({
-  id: 'com.dentonradio.welcome',
+  id: 'com.dcvb.WCDigitalKiosk',
   name: "welcomingcenter",
   author: "LearnEverything",
   email: "jake@discoverdenton.com",
