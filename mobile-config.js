@@ -28,13 +28,6 @@ App.icons({
   'iphone_3x': 'resources/ios/icons/Icon-180@3x.png',
   'ipad':      'resources/ios/icons/Icon-76.png',
   'ipad_2x':   'resources/ios/icons/Icon-152.png',
-
-  // Android
-  'android_mdpi': 'resources/android/drawable-mdpi/icon.png',
-  'android_hdpi': 'resources/android/drawable-hdpi/icon.png',
-  'android_xhdpi': 'resources/android/drawable-xhdpi/icon.png',
-  'android_xxhdpi': 'resources/android/drawable-xxhdpi/icon.png',
-  'android_xxxhdpi': 'resources/android/drawable-xxxhdpi/icon.png'
 });
 
 
@@ -49,14 +42,4 @@ App.launchScreens({
   'ipad_portrait_2x': 'resources/ios/splash/Default-Portrait@2x~ipad_1536x2048.png',
   'ipad_landscape': 'resources/ios/splash/Default-Landscape~ipad_1024x768.png',
   'ipad_landscape_2x': 'resources/ios/splash/Default-Landscape@2x~ipad_2048x1536.png',
-
-  // Android
-  'android_mdpi_portrait': 'resources/android/drawable-mdpi/screen.png',
-  'android_mdpi_landscape': 'resources/android/drawable-land-mdpi/screen.png',
-  'android_hdpi_portrait': 'resources/android/drawable-hdpi/screen.png',
-  'android_hdpi_landscape': 'resources/android/drawable-land-hdpi/screen.png',
-  'android_xhdpi_portrait': 'resources/android/drawable-xhdpi/screen.png',
-  'android_xhdpi_landscape': 'resources/android/drawable-land-xhdpi/screen.png',
-  'android_xxhdpi_portrait': 'resources/android/drawable-xxhdpi/screen.png',
-  'android_xxhdpi_landscape': 'resources/android/drawable-land-xxhdpi/screen.png'
 });
