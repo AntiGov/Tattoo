@@ -1,15 +1,15 @@
 App.info({
-  id: 'com.square205.code33',
-  name: "code33chat",
+  id: 'com.dentonradio.welcome',
+  name: "welcomingcenter",
   author: "LearnEverything",
   email: "jake@discoverdenton.com",
   version: "1.0.0"
 });
 
-App.accessRule('http://gitlab.dentonradio.com/welcoming-center/welcoming-crm.git', {
+/*App.accessRule('http://gitlab.dentonradio.com/welcoming-center/welcoming-crm.git', {
   'minimum-tls-version': 'TLSv1.0',
   'requires-forward-secrecy': false,
-});
+});*/
 
 //
 App.accessRule('*.google.com/*');
