@@ -18,6 +18,7 @@ App.accessRule('*.gstatic.com/*');
 App.accessRule('*.typekit.net/*');
 App.accessRule("*.discoverdenton.com/*");
 App.accessRule("*.simpleviewcrm.com/*");
+App.accessRule("*.dentonradio.com/*");
 //
 
 App.setPreference('BackgroundColor', '0xff0000ff');
