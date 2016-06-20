@@ -26,7 +26,6 @@ function checkLastActivity(){
 	if(Meteor.user()){
 		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
 		//diff /= 60; seconds to minutes
-		console.log(diff, Meteor.user().getSettings().timeoutTime)
 		if(diff >= Meteor.user().getSettings().timeoutTime){
 			//console.log("calling!")
 			var us = AppSettings.findOne({userId: Meteor.userId()});

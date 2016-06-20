@@ -4,7 +4,6 @@ Template.discoverDenton.events({
 			UserStatus.pingMonitor();
 		}
 		document.getElementById("discoverDentonIframe").contentWindow.onscroll = () => {
-			console.log(UserStatus.isMonitoring(), "wowowowowow")
 			if(UserStatus.isMonitoring()) {
 				UserStatus.pingMonitor();
 			}

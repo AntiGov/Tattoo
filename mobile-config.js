@@ -25,6 +25,8 @@ App.accessRule("*.dentonradio.com/*");
 App.setPreference('BackgroundColor', '0xff0000ff');
 App.setPreference('Orientation', 'default');
 App.setPreference('Orientation', 'all', 'ios');
+App.setPreference("SplashScreenDelay", "0");
+App.setPreference("FadeSplashScreen", "false")
 
 //<allow-intent href="*" />
 
