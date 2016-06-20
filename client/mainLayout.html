@@ -3,15 +3,10 @@
 </body>
 
 <template name="mainLayout">
-{{#with currentUser.getSettings}}
-<iframe src="http://discoverDenton.com" class="load-iframe {{currentUser.getSettings.showDiscoverDenton}}" id="discoverDentonIframe"></iframe>
 {{> simpleViewIframe}}
-{{#if isLocating}}
-<div style="position:fixed;top:0;left:0;height:100%;width:100%;z-index:9999999999;background-color:green;">
-</div>
-{{/if}}
-{{/with}}
-<div style="width:{{#if currentUser.getSettings.showDiscoverDenton}}0%{{else}}100%{{/if}};background-image:url('{{currentUser.getBackgroundImage}}')" class="holder">
+{{> locating}}
+<div style="background-image:url('{{currentUser.getBackgroundImage}}')" class="holder">
 {{> Template.dynamic template=main}}
 </div>
+{{> discoverDenton}}
 </template>

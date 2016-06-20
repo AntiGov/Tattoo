@@ -6,7 +6,9 @@ Tracker.autorun(function(){
 		if(FlowRouter.current().route.name === "form") {
 			if(Meteor.user().getSettings() && !Meteor.user().getSettings().showCRM){
 				var us = AppSettings.findOne({userId: Meteor.userId()});
-				AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
+				if(!us.showDiscoverDenton) {
+					AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: true}});
+				}
 			}
 			else {
 				//show discover dnton
@@ -21,16 +23,24 @@ Meteor.startup(function(){
 })
 
 function checkLastActivity(){
-	if(Meteor.user() && FlowRouter.getRouteName() !== "welcomeToDenton"){
+	if(Meteor.user()){
 		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
-		diff /= 60;
+		//diff /= 60; seconds to minutes
+		console.log(diff, Meteor.user().getSettings().timeoutTime)
 		if(diff >= Meteor.user().getSettings().timeoutTime){
+			//console.log("calling!")
 			var us = AppSettings.findOne({userId: Meteor.userId()});
-			 if(Meteor.user().getSettings().showCRM){
-			 		AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
-					FlowRouter.go("welcomeToDenton");
-			 }
-			 document.getElementById("discoverDentonIframe").src = "http://discoverDenton.com";
+			//console.log(document.getElementById("discoverDentonIframe").src)
+			if(document.getElementById("discoverDentonIframe").contentWindow.location.href !== "http://www.discoverdenton.com/") {
+				//console.log("changing iframe source")
+				document.getElementById("discoverDentonIframe").contentWindow.location.href = "http://discoverdenton.com/";
+			}
+			if(Meteor.user().getSettings().showCRM){
+				if(us.showDiscoverDenton) {
+					AppSettings.update({_id: us._id}, {$set: {showDiscoverDenton: false}});
+				}
+				FlowRouter.go("welcomeToDenton");
+			}
 		}
 	}
 }

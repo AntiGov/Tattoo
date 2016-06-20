@@ -25,6 +25,8 @@ App.setPreference('BackgroundColor', '0xff0000ff');
 App.setPreference('Orientation', 'default');
 App.setPreference('Orientation', 'all', 'ios');
 
+//<allow-intent href="*" />
+
 App.icons({
   // iOS
   'iphone_2x': 'resources/ios/icons/Icon-120.png',

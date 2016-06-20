@@ -11,13 +11,22 @@ Template.mainLayout.onCreated(function() {
 	});
 })
 
+Template.mainLayout.events({
+	"hover iframe"() {
+		console.log("click that iframe");
+		console.log("click that iframe");
+		console.log("click that iframe");
+		UserStatus.pingMonitor();
+	}
+})
+
 function startMonitor(){
 	var timeoutT = (Meteor.user().getSettings().timeoutTime * 1000) || 2000;
 	try {
 		UserStatus.startMonitor({threshold : timeoutT, interval: 500});
 	}
 	catch (err) {
-		Meteor.setTimeout(startMonitor(), 100)
+		Meteor.setTimeout(startMonitor(), 500)
 	}
 }
 //svfs $("#svfs");
