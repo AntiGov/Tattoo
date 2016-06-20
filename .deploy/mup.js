@@ -13,9 +13,9 @@ module.exports = {
     servers: {
       one: {},
     },
-    buildOptions: {
-      serverOnly: true
-    },
+//    buildOptions: {
+//     serverOnly: true
+//    },
     env: {
       ROOT_URL: 'http://welcome.dentonradio.com',
       MONGO_URL: 'mongodb://mongodb.dentonradio.com/welcome'

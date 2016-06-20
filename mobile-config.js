@@ -13,22 +13,22 @@ App.info({
 
 //
 App.accessRule("*");
-App.accessRule('*.google.com/*');
+App.accessRule("*", {type: 'navigation'});
+/*App.accessRule('*.google.com/*');
 App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
 App.accessRule('*.typekit.net/*');
 App.accessRule("*.discoverdenton.com/*");
 App.accessRule("*.simpleviewcrm.com/*");
-App.accessRule("*.dentonradio.com/*");
+App.accessRule("*.dentonradio.com/*");*/
+//App.accessRule("*.simpleviewcrm.com/*", {type: "navigation"});
+//App.accessRule("*.discoverdenton.com/*", {type: "navigation"});
 //
 
 App.setPreference('BackgroundColor', '0xff0000ff');
 App.setPreference('Orientation', 'default');
 App.setPreference('Orientation', 'all', 'ios');
-//App.setPreference("SplashScreenDelay", "0");
-//App.setPreference("FadeSplashScreen", "false")
-
-//<allow-intent href="*" />
+App.setPreference('AutoHideSplashScreen', 'true');
 
 App.icons({
   // iOS
