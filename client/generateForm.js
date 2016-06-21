@@ -1,8 +1,8 @@
 Template.generateForm.onRendered(function(){
-  /*Meteor.setTimeout(function(){
+  Meteor.setTimeout(function(){
    $("#svfs").submit();
 		FlowRouter.go("welcomeToDenton");
-	}, 1000)*/
+	}, 1000)
 })
 
 Template.generateForm.events({
