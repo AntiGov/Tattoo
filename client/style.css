@@ -1,3 +1,15 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.circle-form {
+	border-radius:100px;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+	border-top:none !important;
+}
+
 .formCarrier{
 	opacity:.96;
 	position: absolute;
@@ -12,12 +24,19 @@
   border-radius:30px;
 }
 
-input {
-	line-height:30px;
+.introCircle {
+	display:table;
+	border-radius:150px;
+	opacity:.96;
+	position: absolute;
+	top: 50%;
+	padding:30px;
+	transform: translateY(-50%);
+	border-style:solid;
 }
 
-.h1, .h2, .h3 {
-	font-family: 'Roboto Slab', serif;
+input {
+	line-height:30px;
 }
 
 .holder {
@@ -51,7 +70,6 @@ input {
 
 .welcomePhraseStyle{
 	font-size:110px;
-	font-family: 'Roboto Slab', serif;
 }
 .formSplit .col-md-6{
 	padding:25px;

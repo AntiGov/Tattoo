@@ -1,5 +1,11 @@
 <template name="formView">
 {{#with currentUser}}
+<style>
+input {
+	background-color:{{getSettings.appStyle.fontColor}} !important; 
+	color:{{getSettings.appStyle.bgColor}} !important;
+}
+</style>
 <div class="formCarrier" style="background-color:{{getSettings.appStyle.bgColor}};color:{{getSettings.appStyle.fontColor}};">
 {{#autoForm type="insert" collection="UserForms" id="insertForm"}}
 	<div class="row">
@@ -16,14 +22,11 @@
 			</div>
 		</div>
 	</div>
-	{{#unless emailSubscribe}}
-	<a style="color:{{getSettings.appStyle.accentColor}};" href="" data-action="show-subscribe">Subscribe to our newsletter?</a>
-	{{else}}
-	<a style="color:{{getSettings.appStyle.accentColor}};" href="" data-action="hide-subscribe">Cancel subscription</a>
-	{{> afQuickField name="email" label=false}}
-	{{/unless}}
+	<div style="width:100%;text-align:center;">
+	<a style="color:{{getSettings.appStyle.fontColor}};" href="" data-action="show-subscribe">Subscribe to our newsletter{{#if emailSubscribe}}{{> afFieldInput name="email" label=false style="display:inline-block;width:200px"}}{{/if}}</a>
+	</div>
 	<!-- Email subscribe?-->
-	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="color:{{getSettings.appStyle.accentColor}};">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body"> 
+	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration:underline;">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body"> 
 	<div class="row">
 	<div class="col-md-6">First Name {{> afQuickField name="firstName" label=false}}</div>
 	<div class="col-md-6">Last Name {{> afQuickField name="lastName" label=false}}</div>
@@ -32,7 +35,7 @@
 	{{> afQuickField  name="interests" type="select-checkbox-inline" noselect="true"}}</div>
 	</div> </div> </div> </div> </div>
 	<button class="btn btn-primary hidden" type="submit" id="submitFormBtn">Submit Form</button>
-	<div style="position:fixed;right:20px;bottom:20px;"><a style="color:{{getSettings.appStyle.accentColor}};" href="" data-action="submitForm">Send to the City of Denton!</a></div>
+	<div style="position:fixed;right:50%;bottom:20px;background-color:{{getSettings.appStyle.fontColor}}"><a style="color:{{getSettings.appStyle.bgColor}};" href="" data-action="submitForm">Send!</a></div>
 {{/autoForm}}
 </div>
 {{/with}}

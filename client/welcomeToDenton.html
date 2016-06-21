@@ -1,8 +1,9 @@
 <template name="welcomeToDentonView">
 {{#with currentUser}}
-<div class="formCarrier" style="background-color:{{getSettings.appStyle.bgColor}};color:{{getSettings.appStyle.fontColor}};display:table;">
-<div style="text-align:center;padding:50px;display:table-cell;vertical-align:middle;" data-action="goto-form" class="welcomePhraseStyle">
-{{{getSettings.appLocation.welcomePhrase}}}
+<div class="introCircle" style="border-color:{{getSettings.appStyle.bgColor}};">
+<div style="text-align:center;padding:50px;display:table-cell;vertical-align:middle;background-color:{{getSettings.appStyle.bgColor}};color:{{getSettings.appStyle.fontColor}};border-radius:150px;" data-action="goto-form" class="welcomePhraseStyle">
+{{getSettings.appLocation.welcomePhrase1}}
+{{getSettings.appLocation.welcomePhrase2}}
 </div>
 </div>
 {{/with}}
