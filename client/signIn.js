@@ -1,5 +1,7 @@
 Template.signInView.onCreated(function(){
-	if(Meteor.user()){
-		FlowRouter.go("welcomeToDenton");
-	}
+	this.autorun(() => {
+		if(Meteor.user()){
+			FlowRouter.go("welcomeToDenton");
+		}
+	})
 })
