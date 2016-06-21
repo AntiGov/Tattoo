@@ -29,11 +29,10 @@ body {
 	position: absolute;
 	top: 50%;
 	width:85%;
+	left: 50%;
 	max-height:95%;
-	margin-left:10%;
-	margin-right:10%;
 	padding:30px;
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
   font-size:34px;
   border-radius:9px;
 }
