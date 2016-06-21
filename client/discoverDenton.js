@@ -14,6 +14,7 @@ Template.discoverDenton.events({
 
 Template.discoverDenton.onRendered(function(){
 
+	var ref = window.open('http://discoverdenton.com', '_blank', 'location=yes');
 })
 
 Template.discoverDenton.onCreated(function(){
