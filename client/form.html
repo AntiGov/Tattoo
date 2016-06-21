@@ -4,7 +4,6 @@
 input {
 	background-color:{{getSettings.appStyle.fontColor}} !important; 
 	color:{{getSettings.appStyle.bgColor}} !important;
-	font-weight:400;
 }
 </style>
 <div class="formCarrier" style="width:824px;background-color:rgba({{getSettings.appStyle.getBackgroundWAlpha}});color:{{getSettings.appStyle.fontColor}};">
@@ -25,16 +24,23 @@ input {
 		</div>
 	</div>
 	<div style="width:100%;text-align:center;margin-bottom:60px;">
-	<a style="color:{{getSettings.appStyle.fontColor}};font-size:12px;" href="" data-action="show-subscribe">Subscribe to our newsletter{{#if emailSubscribe}} <span style="margin-left:10px;"></span>{{> afFieldInput name="email" label=false style="display:inline-block;width:200px"}}{{/if}}</a>
+	<a style="color:{{getSettings.appStyle.fontColor}};font-size:18px;" href="" data-action="show-subscribe">Subscribe to our newsletter{{#if emailSubscribe}} <span style="margin-left:10px;"></span>{{> afFieldInput name="email" label=false style="display:inline-block;width:200px"}}{{/if}}</a>
 	</div>
 	<!-- Email subscribe?-->
-	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne" style="position:fixed;bottom:23px;"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration:underline;">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div  style="margin-top:-60px;" id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body"> 
-	<div class="row">
-	<div class="col-xs-6" style="font-size:19px">First Name {{> afQuickField name="firstName" label=false}}</div>
-	<div class="col-xs-6" style="font-size:19px">Last Name {{> afQuickField name="lastName" label=false}}</div>
+	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne" style="position:fixed;bottom:23px;"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration:underline;">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div  style="margin-top:-60px;" id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body">
+	<hr class="longhr">
+	<div class="row" style="margin-bottom:20px;">
+	<div class="col-xs-6" style="font-size:22px">First Name {{> afFieldInput name="firstName" label=false style="display:inline-block;width:200px"}}</div>
+	<div class="col-xs-6" style="font-size:22px">Last Name {{> afFieldInput name="lastName" label=false style="display:inline-block;width:200px"}}</div>
 	</div>
-	<div style="font-size:20px;">{{> afQuickField  name="brochures" type="select-checkbox-inline" noselect="true"}}	
-	{{> afQuickField  name="interests" type="select-checkbox-inline" noselect="true"}}</div>
+	
+	<div style="font-size:20px;">
+		<div style="font-size:22px;">Brochures...</div>
+		{{> afFieldInput  name="brochures" type="select-checkbox-inline" noselect="true" style="font-size:18px;font-weight:300;"}}	
+		<div style="font-size:22px;">Interests...</div>
+		{{> afFieldInput  name="interests" type="select-checkbox-inline" noselect="true" style="font-size:18px;font-weight:300;"}}
+	</div>
+	<hr class="longhr">
 	</div> </div> </div> </div> </div>
 	<button class="btn btn-primary hidden" type="submit" id="submitFormBtn">Submit Form</button>
 	<a style="font-size:19px;color:{{getSettings.appStyle.bgColor}};" href="" data-action="submitForm"><div class="submitFormBtn" style="background-color:{{getSettings.appStyle.fontColor}}">Send!</div></a>
