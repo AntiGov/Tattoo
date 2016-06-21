@@ -1,13 +1,28 @@
 <template name="generateForm">
 <form action="http://denton.simpleviewcrm.com/forms/index.cfm?action=save" method="post" target="simpleview-iframe" id="svfs">
-	<input id="date" name="inquiry_inquirydate" value="05/24/2016">
+	<input id="date" name="inquiry_inquirydate" value="{{dateFormated}}">
 	<input id="groupid" name="groupid" value="5">
 	<input id="formid" name="formid" value="{{formId}}">
-	<input id="cc" name="contact_comments" value="{{comments}}">
+	<input name="contact_zip" value="{{zip}}" />
    <input name="udf_409" value="{{numInGroup}}" />
-   <input name="contact_fname" value="{{firstName}}" />
-   <input name="contact_lname" value="{{lastName}}" />
+   {{#if lastName}}
+   <input name="contact_lname" type="text" value="{{lastName}}" />
+   {{/if}}
+   {{#if firstName}}
+   <input name="contact_fname" type="text" value="{{firstName}}" />
+   {{/if}}
+   {{#each brochures}}
+		<input type="checkbox" name="inquiry_brochures" value="{{.}}" checked/>
+		{{/each}}
+		{{#each interests}}
+		<input type="checkbox" name="inquiry_interest" value="{{.}}" checked/>
+	   {{/each}}
+	    {{#if email}}
    <input name="contact_email" value="{{email}}" />
-   <input name="contact_zip" value="{{zip}}" />
+   {{/if}}
 </form>
 </template>
+
+<template name="toImplement">
+   <input name="contact_comments" value="NA"/>
+   </template>
