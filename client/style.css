@@ -1,6 +1,104 @@
 body {
 	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
+	font-weight: lighter;
+}
+
+h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 34px;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 26px;
+	font-weight: lighter;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	float:left;
+}
+
+h4 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	float:left;
+	padding-top:30px;
+	padding-bottom:10px;
+	padding-right:660px;
+}
+
+h6 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 26px;
+	font-weight: bolder;
+	text-align: center;
+	font-style:italic;
+	color: #2b2b2b;
+}
+
+hr {
+	margin-top:20px;
+	margin-bottom:40px;
+	margin-left:-40px;
+	margin-right:-40px;
+	border:0;
+	border-top:1px solid #8c8c8c;
+	opacity:0.33;
+
+}
+
+.name {
+	float:left;
+	font-size: 24px;
+}
+
+.nameInput {
+	float:left;
+	padding-left:17px;
+	padding-right:40px;
+	margin-top:-13px;
+}
+
+.panel-body {
+	padding:0px;
+}
+
+.panel-heading {
+	margin-bottom:-5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	font-style:italic;
+	font-weight: lighter;
+}
+
+.panel-title {
+	font-size: 18px;
+
+}
+
+.checkBoxes1 {
+	float:left;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: lighter;
+	padding-bottom:0px;
+}
+
+.checkBoxes2 {
+	float:left;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: lighter;
+	padding-bottom:60px;
 }
 
 .circle-form {
@@ -12,6 +110,7 @@ body {
 }
 
 .submitFormBtn {
+	font-size: 26px;
 	transform: translateY(-50%);
 	position:fixed;
 	left:50%;
@@ -31,10 +130,10 @@ body {
 	width:85%;
 	left: 50%;
 	max-height:95%;
-	padding:30px;
+	padding:40px;
 	transform: translate(-50%, -50%);
-  font-size:34px;
-  border-radius:9px;
+	font-size:34px;
+ 	border-radius:9px;
 }
 
 .introCircle {
@@ -89,8 +188,15 @@ body {
 }
 
 label {
-	font-size: 17px !important;
+	font-size: 16px !important;
+	font-weight: lighter !important;
 }
+
 input {
 	font-weight:400 !important;
+}
+
+.buttonStuff{
+padding-top:15px;
+float:left;
 }
