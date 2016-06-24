@@ -13,6 +13,19 @@ Meteor.publish(null, function(){
 	if(!this.userId){
 		return this.ready();
 	}
+	return AppLocations.find({});
+})
+Meteor.publish(null, function(){
+	if(!this.userId){
+		return this.ready();
+	}
+	return AppStyles.find({})
+})
+/*
+Meteor.publish(null, function(){
+	if(!this.userId){
+		return this.ready();
+	}
 	var settings = Meteor.users.findOne({_id: this.userId}).getSettings();
 	if(!settings) {
 		return this.ready();
@@ -30,3 +43,9 @@ Meteor.publish(null, function(){
 	}
 	return AppStyles.find({_id: settings.appStyleId});
 })
+
+Meteor.publish("allStyles", {
+
+})
+
+Meteor.publish()*/
