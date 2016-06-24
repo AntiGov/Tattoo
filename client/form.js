@@ -1,7 +1,7 @@
 AutoForm.hooks({
   insertForm: {
     onSuccess(formType, res) {
-      AppSettings.update({_id: Meteor.user().getSettings()._id}, {$set: {showDiscoverDenton: true}})
+      //AppSettings.update({_id: Meteor.user().getSettings()._id}, {$set: {showDiscoverDenton: true}})
       FlowRouter.go("formSubmit", {_id: res});
     }
   }

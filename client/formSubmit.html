@@ -1,9 +1,12 @@
 <template name="formSubmitView">
-<div class="introCircle" style="border-color:rgba(42, 42, 42, .67);">
-<div style="text-align:center; padding:50px; display:table-cell; vertical-align:middle; background-color:rgba(42, 42, 42, .67); color:#ffffff; border-radius:324px;" data-action="goto-form" class="welcomePhraseStyle">
+<div class="introCircle" style="border-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});">
+<div style="text-align:center;padding:50px;display:table-cell;vertical-align:middle;background-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});color:{{currentUser.getSettings.appStyle.fontColor}};border-radius:324px;" data-action="goto-form" class="welcomePhraseStyle">
 <div style="font-size:32pt;">Thank You!</div>
 </div>
 </div>
+</template>
+
+<template name="oldSimpleView">
 <div style="visibility:hidden;">
 {{#with userForm}}
 {{> generateForm}}

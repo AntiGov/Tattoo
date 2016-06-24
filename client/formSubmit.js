@@ -4,3 +4,8 @@ Template.formSubmitView.helpers({
 	}
 })
 	
+Template.formSubmitView.onRendered(function(){
+	Meteor.setTimeout(function(){
+		FlowRouter.go("welcomeToDenton")
+	},3000);
+})

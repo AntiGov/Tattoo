@@ -1,12 +1,11 @@
 <template name="formView">
-{{#with currentUser}}
 <style>
 input {
-	background-color:{{getSettings.appStyle.fontColor}} !important; 
-	color:{{getSettings.appStyle.bgColor}} !important;
+	background-color:{{currentUser.getSettings.appStyle.fontColor}} !important; 
+	color:{{currentUser.getSettings.appStyle.bgColor}} !important;
 }
 </style>
-<div class="formCarrier" style="width:824px !important;background-color:rgba({{getSettings.appStyle.getBackgroundWAlpha}});color:{{getSettings.appStyle.fontColor}};">
+<div class="formCarrier" style="width:824px !important;background-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});color:{{currentUser.getSettings.appStyle.fontColor}};">
 <div style="font-size:24px;">Your Details...</div>
 {{#autoForm type="insert" collection="UserForms" id="insertForm"}}
 	<div class="row">
@@ -24,7 +23,7 @@ input {
 		</div>
 	</div>
 	<div style="width:100%;text-align:center;margin-bottom:60px;">
-	<a style="color:{{getSettings.appStyle.fontColor}};font-size:18px;" href="" data-action="show-subscribe">Subscribe to our newsletter{{#if emailSubscribe}} <span style="margin-left:10px;"></span>{{> afFieldInput name="email" label=false style="display:inline-block;width:200px"}}{{/if}}</a>
+	<a style="color:{{currentUser.getSettings.appStyle.fontColor}};font-size:18px;" href="" data-action="show-subscribe">Subscribe to our newsletter{{#if emailSubscribe}} <span style="margin-left:10px;"></span>{{> afFieldInput name="email" label=false style="display:inline-block;width:200px"}}{{/if}}</a>
 	</div>
 	<!-- Email subscribe?-->
 	<div class="bs-example" data-example-id="collapse-accordion"> <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> <div> <div class="panel-heading" role="tab" id="headingOne" style="position:fixed;bottom:23px;"> <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-action="toggleExpand" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration:underline;">{{#if optionsExpanded}} - Less Options{{else}} + More Options {{/if}}</a> </h4> </div> <div  style="margin-top:-60px;" id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"> <div class="panel-body">
@@ -43,8 +42,7 @@ input {
 	<hr class="longhr">
 	</div> </div> </div> </div> </div>
 	<button class="btn btn-primary hidden" type="submit" id="submitFormBtn">Submit Form</button>
-	<a style="font-size:19px;color:{{getSettings.appStyle.bgColor}};" href="" data-action="submitForm"><div class="submitFormBtn" style="background-color:{{getSettings.appStyle.fontColor}}">Send!</div></a>
+	<a style="font-size:19px;color:{{getSettings.appStyle.bgColor}};" href="" data-action="submitForm"><div class="submitFormBtn" style="background-color:{{currentUser.getSettings.appStyle.fontColor}}">Send!</div></a>
 {{/autoForm}}
 </div>
-{{/with}}
 </template>
