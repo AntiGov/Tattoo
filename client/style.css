@@ -198,5 +198,11 @@ input {
 
 .buttonStuff{
 padding-top:15px;
-float:left;
+text-align:center;
+width:100%;
+}
+
+.invalid .form-control {
+	border-color:#EC0000;
+	border-size:2px;
 }

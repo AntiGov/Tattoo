@@ -18,16 +18,10 @@ Template.formView.events({
 		e.stopPropagation();
 		e.preventDefault();
 	},
-	"click [data-action='submitForm']"(e) {
-		document.getElementById("submitFormBtn").click();
-	},
 	"click [data-action='toggleExpand']"(){
 		var oe = Template.instance().optionsExpanded.get();
 		Template.instance().optionsExpanded.set(!oe);
 	},
-	"click #submitFormBtn"(e) {
-		//e.preventDefault();
-	}
 })
 
 Template.formView.onCreated(function(){
