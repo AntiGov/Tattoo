@@ -197,9 +197,11 @@ input {
 }
 
 .buttonStuff{
-padding-top:15px;
+margin-top:-25px;
 text-align:center;
 width:100%;
+margin-bottom:-15px;
+
 }
 
 .invalid .form-control {
