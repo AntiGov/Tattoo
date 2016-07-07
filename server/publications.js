@@ -21,6 +21,31 @@ Meteor.publish(null, function(){
 	}
 	return AppStyles.find({})
 })
+
+Meteor.publish("unsubmittedForms", function(){
+	return UserForms.find({hasSubmitted: false})
+})
+
+Meteor.publishComposite("allUsers", function(){
+	if(!this.userId){
+		return this.ready();
+	}
+	return {
+		find() {
+			return Meteor.users.find();
+		},
+		children: [{
+			find(user) {
+				return AppSettings.find({userId: user._id});
+			},
+			children: [{
+				find(appSettings) {
+					return AppLocations.find({_id: appSettings.appLocationId});
+				}
+			}]
+		}]
+	}
+})
 /*
 Meteor.publish(null, function(){
 	if(!this.userId){

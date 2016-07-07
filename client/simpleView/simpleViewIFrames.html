@@ -1,0 +1,14 @@
+<template name="simpleViewIFrames">
+{{#each users}}
+	{{#with getSettings}}
+		{{#if showCRM}}
+			{{#with appLocation}}
+				{{> simpleViewIframe}}
+			{{/with}}
+		{{/if}}
+	{{/with}}
+{{/each}}
+{{#each unsubmittedForms}}
+	{{> generateForm}}
+{{/each}}
+</template>

@@ -1,8 +1,9 @@
 Template.generateForm.onRendered(function(){
-  Meteor.setTimeout(function(){
-   $("#svfs").submit();
-		FlowRouter.go("welcomeToDenton");
-	}, 1000)
+  Meteor.setTimeout(() => {
+  	console.log(this.data.appSettingsId, this.data._id)
+   $("#svfs" + this.data.appSettingsId).submit();
+   UserForms.update({_id: this.data._id}, {$set: {hasSubmitted: true}})
+	}, 2000)
 })
 
 Template.generateForm.events({

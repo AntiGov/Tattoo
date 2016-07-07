@@ -12,6 +12,7 @@ input {
 		<div class="col-xs-6">
 			<div class="row formSplit" >
 				<div class="col-xs-6 col-xs-offset-1"><h2>Group Size</h2></div>
+				{{> afFieldInput name="appSettingsId" value=currentUser.getSettings._id type="hidden"}}
 				<div class="col-xs-4 {{#if afFieldIsInvalid  name='numInGroup'}}invalid{{/if}}">{{> afFieldInput name="numInGroup" label=false style="width:60px;margin-top:-2px;font-size:20px"}}</div>
 			</div>
 		</div>

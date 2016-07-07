@@ -1,5 +1,5 @@
 <template name="generateForm">
-<form action="http://denton.simpleviewcrm.com/forms/index.cfm?action=save" method="post" target="simpleview-iframe" id="svfs">
+<form action="http://denton.simpleviewcrm.com/forms/index.cfm?action=save" method="post" target="simpleview-iframe{{appSettingsId}}" id="svfs{{appSettingsId}}">
 	<input id="date" name="inquiry_inquirydate" value="{{dateFormated}}">
 	<input id="groupid" name="groupid" value="5">
 	<input id="formid" name="formid" value="{{formId}}">
