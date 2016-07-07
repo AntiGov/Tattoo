@@ -1,7 +1,7 @@
 <template name="simpleViewIframe">
 <div><a href="" data-action="login-simple-view"><button class="btn btn-primary">Login</button></a></div>
 <div><a href="" data-action="goto-form"><button class="btn btn-primary">Goto Form</button></a></div>
-<form action="http://denton.simpleviewcrm.com/login/login.cfm" method="post" target="simpleview-iframe{{../_id}}" id="{{../_id}}">
+<form action="http://denton.simpleviewcrm.com/login/login.cfm" method="post" target="simpleview-iframe{{../_id}}" id="svlf{{../_id}}">
    <input type="hidden" name="email" value="jake@discoverdenton.com" />
    <input type="hidden" name="password" value="welcomecent" />
 </form>
