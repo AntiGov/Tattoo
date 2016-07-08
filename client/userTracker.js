@@ -3,8 +3,8 @@ Meteor.startup(function(){
 })
 
 function checkLastActivity(){
-	if(Meteor.user()){
-		var diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
+	if(Meteor.user() && Meteor.user().getSettings()){
+		let diff = (new Date().getTime() - UserStatus.lastActivity()) / 1000;
 		if(diff >= Meteor.user().getSettings().timeoutTime){
 			if(Meteor.user().getSettings().showCRM) {
 				FlowRouter.go("welcomeToDenton");
