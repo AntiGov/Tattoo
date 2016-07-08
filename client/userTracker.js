@@ -10,6 +10,7 @@ function checkLastActivity(){
 				FlowRouter.go("welcomeToDenton");
 				if(App.ref) {
 					App.ref.close();
+					App.ref = window.open('http://discoverdenton.com', '_blank', 'location=no,hidden=yes,toolbar=no');
 				}
 			}
 		}
