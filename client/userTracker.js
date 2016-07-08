@@ -8,6 +8,9 @@ function checkLastActivity(){
 		if(diff >= Meteor.user().getSettings().timeoutTime){
 			if(Meteor.user().getSettings().showCRM) {
 				FlowRouter.go("welcomeToDenton");
+				if(App.ref) {
+					App.ref.close();
+				}
 			}
 		}
 	}
