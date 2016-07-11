@@ -6,7 +6,11 @@
 {{> locating}}
 
 <div style="background-image:url('{{currentUser.getBackgroundImage}}')" class="holder">
+{{#unless currentUser.getSettings.isNeedingAssistance}}
 <div class='pull-right' data-action="request-expert" style="border-radius:15px;padding:10px;background-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});color: {{currentUser.getSettings.appStyle.fontColor}}"><h2><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Request Expert</h2></div>
+{{else}}
+<div class='pull-right' data-action="request-expert" style="border-radius:15px;padding:10px;background-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});color: {{currentUser.getSettings.appStyle.fontColor}}"><h2><span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Expert Requested</h2></div>
+{{/unless}}
 {{> Template.dynamic template=main}}
 </div>
 {{> discoverDenton}}

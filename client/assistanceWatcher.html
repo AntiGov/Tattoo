@@ -1,4 +1,5 @@
 <template name="assistanceWatcher">
+<div class="container">
 {{#each users}}
 {{#with getSettings}}
 {{#if isNeedingAssistance}}
@@ -7,4 +8,5 @@
 {{/if}}
 {{/with}}
 {{/each}}
+</div>
 </template>
