@@ -1,0 +1,10 @@
+<template name="assistanceWatcher">
+{{#each users}}
+{{#with getSettings}}
+{{#if isNeedingAssistance}}
+{{#each ../emails}}{{address}} needs assistance!{{/each}}
+<button class='btn btn-primary' data-action="clear-assistance">Clear assistance</button>
+{{/if}}
+{{/with}}
+{{/each}}
+</template>

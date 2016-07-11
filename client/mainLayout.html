@@ -4,7 +4,9 @@
 
 <template name="mainLayout">
 {{> locating}}
+
 <div style="background-image:url('{{currentUser.getBackgroundImage}}')" class="holder">
+<div class='pull-right' data-action="request-expert" style="border-radius:15px;padding:10px;background-color:rgba({{currentUser.getSettings.appStyle.getBackgroundWAlpha}});color: {{currentUser.getSettings.appStyle.fontColor}}"><h2><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Request Expert</h2></div>
 {{> Template.dynamic template=main}}
 </div>
 {{> discoverDenton}}

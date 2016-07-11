@@ -17,6 +17,10 @@ Template.mainLayout.events({
 		console.log("click that iframe");
 		console.log("click that iframe");
 		UserStatus.pingMonitor();
+	},
+	'click [data-action="request-expert"]'() {
+		var uid = Meteor.user().getSettings()._id;
+		AppSettings.update({_id: uid}, {$set: {isNeedingAssistance: true}})
 	}
 })
 
