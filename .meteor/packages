@@ -19,6 +19,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 insecure                # Allow all DB writes from clients (for prototyping)
 kadira:flow-router
+<<<<<<< HEAD
 aldeed:simple-schema
 aldeed:collection2
 useraccounts:bootstrap
@@ -44,3 +45,14 @@ mizzao:user-status
 michalvalasek:autoform-bootstrap-colorpicker
 momentjs:moment
 reywood:publish-composite
+=======
+kadira:blaze-layout
+aldeed:collection2
+aldeed:autoform
+arillo:flow-router-helpers
+twbs:bootstrap
+accounts-ui
+accounts-password
+yogiben:admin
+dburles:collection-helpers
+>>>>>>> 8a7cd95d8fcef15f832b1622a061e9f9a76067f0

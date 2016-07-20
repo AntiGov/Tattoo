@@ -11,3 +11,7 @@ notices-for-facebook-graph-api-2
 1.2.0-cordova-changes
 1.2.0-breaking-changes
 1.3.0-split-minifiers-package
+<<<<<<< HEAD
+=======
+1.3.5-remove-old-dev-bundle-link
+>>>>>>> 8a7cd95d8fcef15f832b1622a061e9f9a76067f0
