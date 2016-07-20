@@ -1,1 +1,0 @@
-ROOT_URL=http://welcome.dentonradio.com meteor run ios-device --mobile-server welcome.dentonradio.com

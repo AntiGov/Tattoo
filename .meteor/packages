@@ -24,6 +24,7 @@ aldeed:collection2
 useraccounts:bootstrap
 accounts-base
 accounts-password
+accounts-ui
 twbs:bootstrap
 raix:handlebar-helpers
 dburles:collection-helpers
