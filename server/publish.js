@@ -1,11 +1,11 @@
-Meteor.publish("tattoostudio",function(){
+Meteor.publish(null,function(){
   return TattooStudio.find({})
 })
 
-Meteor.publish("tattooapointment",function(){
+Meteor.publish(null,function(){
   return TattooApointment.find({})
 })
 
-Meteor.publish("studioartists",function(){
-  return StudioArtists.find({})
+Meteor.publish(null,function(){
+  return StudiosArtists.find({})
 })
