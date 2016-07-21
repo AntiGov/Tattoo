@@ -7,3 +7,9 @@ body {
   margin-left: 700px;
 
 }
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 10px;
+}
