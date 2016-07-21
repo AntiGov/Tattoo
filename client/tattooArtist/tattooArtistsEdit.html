@@ -1,0 +1,14 @@
+<template name="tattooArtistsEditView">
+  <div class="container">
+    <h1>Edit {{artist.name}}</h1>
+     <div class="col-md-4">
+     {{#autoForm collection="StudiosArtists" type="update" id="updateTattooArtist" doc=artist}}
+     {{> afQuickField name="name"}}
+     {{> afQuickField name="tattooStudioId"}}
+     {{> afQuickField name="role"}}
+     {{> afFieldInput name="tattooArtistId" value=artist_.id}}
+     <button class="btn btn-primary">Submit</button>
+     {{/autoForm}}
+     </div>
+  </div>
+</template>

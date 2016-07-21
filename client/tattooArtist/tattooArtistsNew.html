@@ -1,5 +1,10 @@
 <template name="tattooArtistsNewView">
   <div class="container">
      <h1>Tattoo Artists New</h1>
+      <div class="row">
+        <div class="col-md-4">
+          {{> quickForm collection="StudiosArtists" id="tattooArtistsNew" type="insert"}}
+        </div>
+      </div>
   </div>
 </template>
