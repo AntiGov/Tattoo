@@ -1,5 +1,19 @@
 <template name="tattooAppointmentListView">
-  <div class="container">
+    <div class="container">
      <h1>Tattoo Appontment List</h1>
+      <div class="row ">
+
+      {{#each appointments}}
+             
+            <div class="col-md-4">      
+                <h2>{{date}}</h2>
+                 <div>
+                 <a class ="btn btn-danger" href="" data-action="delete-appoint">delete</a> - 
+                 <a class="btn btn-primary" href="{{pathFor 'tattooAppointmentEdit' _id=_id}}">edit</a>
+                 </div>
+            </div>
+            
+      {{/each}}
+      </div>
   </div>
 </template>

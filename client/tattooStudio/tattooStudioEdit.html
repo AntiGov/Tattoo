@@ -4,7 +4,7 @@
       <div class="col-md-4">
      {{#autoForm collection="TattooStudio" type="update" id="updateTattooStudio" doc=studio}}
      {{> afQuickField name="name"}}
-     {{> afFieldInput name="tattooStudioId" value=studio._id}}
+     {{> afFieldInput name="tattooStudioId" type="hidden" value=studio._id}}
      <button class="btn btn-primary">Submit</button>
      {{/autoForm}}
      </div>
